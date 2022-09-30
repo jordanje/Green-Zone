@@ -1,0 +1,15 @@
+.plant-list img{
+    width: 150px;
+    height: 180px;
+}
+
+.plant-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.plant-1 {
+    height: 350px;
+    width: 160px;
+    padding: 10px;
+}
