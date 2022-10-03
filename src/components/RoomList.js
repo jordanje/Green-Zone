@@ -36,7 +36,7 @@ function RoomList ({search}) {
             <label>Add plant to: 
                 <select className="form-dropdown" name="room" value={currentRoom} onChange={handleRoomChange}>
                     {rooms.map((room) => {
-                    return <option key={room.id} value={room}>{room}</option>
+                    return <option key={room} value={room}>{room}</option>
                     })}
                 </select>
             </label>
