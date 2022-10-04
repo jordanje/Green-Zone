@@ -22,9 +22,18 @@ export default function Room({room}) {
         })
         .then((r) => r.json())
         .then((data) => console.log(data))
-        
     }
 
+    function deleteHandler(id) {
+        fetch(`http://localhost:9292/addplants/${id}`, {
+            method: "DELETE"
+        })
+        .then((res) => res.json())
+        .then((deleting) => 
+        {const deletePlant = addedPlants.filter(deletedPlant => deletedPlant.id !== id)
+        setAddedPlants(deletePlant)})
+        
+    }
 
     return (
         <div id="room">
@@ -35,6 +44,7 @@ export default function Room({room}) {
                 <p>{addedPlant.plant.name}</p>
                 <img src={addedPlant.plant.image} />
                 <button onClick={() => handleWaterPlant(addedPlant.id)}>Water</button>
+                <button onClick={() => deleteHandler(addedPlant.id)} className="delete">Delete</button>
             </div>
             ))}
             </div>
