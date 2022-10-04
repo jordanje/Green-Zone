@@ -1,9 +1,23 @@
 .navbar {
-    height: 100px;
-    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgb(136, 203, 136);
+
 }
 
-.nav-link {
+.navbar h1 {
+    font-family: 'Fredoka One', cursive;
+    font-weight: 400;
+    font-size: 36px;
+}
+
+.nav-links a{
+    color:rgb(3, 3, 3);
+    text-decoration: none;
     padding: 10px;
+    font-weight: 600;
 }
 
