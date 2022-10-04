@@ -3,6 +3,7 @@ import "./Room.css"
 
 export default function Room({room}) {
     const [ addedPlants, setAddedPlants ] = useState([])
+    const [ isOn, setIsOn ] = useState({id: ""})
 
     useEffect(() => {
         fetch(`http://localhost:9292/rooms/${room.id}/added_plants`)
@@ -10,8 +11,8 @@ export default function Room({room}) {
         .then(plants => setAddedPlants(plants))
     }, [])
 
-
     function handleWaterPlant(id) {
+        // setIsOn(true)
         fetch(`http://localhost:9292/added_plants/${id}`, {
             method: "PATCH",
             headers: {
@@ -21,7 +22,7 @@ export default function Room({room}) {
             }),
         })
         .then((r) => r.json())
-        .then((data) => console.log(data))
+        .then((data) => setIsOn({ id: id, isWatered: true}))
     }
 
     function deleteHandler(id) {
@@ -31,8 +32,7 @@ export default function Room({room}) {
         .then((res) => res.json())
         .then((deleting) => 
         {const deletePlant = addedPlants.filter(deletedPlant => deletedPlant.id !== id)
-        setAddedPlants(deletePlant)})
-        
+        setAddedPlants(deletePlant)}) 
     }
 
     return (
@@ -40,8 +40,9 @@ export default function Room({room}) {
             <h2>{room.name}</h2>
             <div className="added-plants">
             {addedPlants.map((addedPlant) => (
-            <div key={addedPlant.id}>
+            <div className="current-plants" key={addedPlant.id}>
                 <p>{addedPlant.plant.name}</p>
+                <div className={(isOn.id=== addedPlant.id) ? "water-droplet" : ""}></div>
                 <img src={addedPlant.plant.image} />
                 <button onClick={() => handleWaterPlant(addedPlant.id)}>Water</button>
                 <button onClick={() => deleteHandler(addedPlant.id)} className="delete">Delete</button>
