@@ -63,7 +63,7 @@ function App() {
           <Home />
         </Route>
         <Route exact path="/rooms">
-          <RoomContainer rooms={rooms} addedPlants={addedPlants}/>
+          <RoomContainer rooms={rooms} setRooms={setRooms} addedPlants={addedPlants}/>
         </Route>
         <Route exact path="/plants">
           <PlantCards 
