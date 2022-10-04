@@ -5,8 +5,12 @@ import "./NavBar.css"
 function NavBar() {
     return (
         <div className="navbar">
-            <NavLink className="nav-link" to="/rooms">Rooms</NavLink>
-            <NavLink className="nav-link" to="/plants">Plants</NavLink>
+            <h1>Green Room</h1>
+            <div className="nav-links">
+                <NavLink className="link" to="/rooms">Rooms</NavLink>
+                <NavLink className="link" to="/plants">Plants</NavLink>
+            </div>
+           
         </div>
       )}
 export default NavBar

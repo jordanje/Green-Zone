@@ -1,19 +1,18 @@
 import React, { useState } from "react";
+import "./RoomList.css";
 import "./Home.css";
 
 function RoomList ({search, rooms, handleRoomChange, currentRoom}) {
 
     return (
         <div>
-            <label>Add plant to: 
-                <select className="form-dropdown" name="room" value={currentRoom} onChange={handleRoomChange}>
-                    <option>Select Room</option>
-                   
+                <select className="room-select" name="room" value={currentRoom} onChange={handleRoomChange}>
+                    <option>Select room to add to</option>
+                
                     {rooms.map((room) => {
-                    return <option key={room.id} value={room.id} name={room.name}>{room.name}</option>
+                    return <option key={room.id} value={room.id} name={room.name} className="rooms">{room.name}</option>
                     })} 
                 </select>
-            </label> 
         </div>
     )
 }

@@ -5,8 +5,8 @@ import Search from "./Search";
 
 export default function PlantCards({plants, handleSearchChange, searchValue, rooms, currentRoom, handleRoomChange}) {
     return (
-        <div>
-            <div>
+        <div className="plant-page">
+            <div className="plant-fx">
                 <Search handleSearchChange={handleSearchChange} searchValue={searchValue}/>
                 <RoomList rooms={rooms} currentRoom={currentRoom} handleRoomChange={handleRoomChange}/>
             </div>

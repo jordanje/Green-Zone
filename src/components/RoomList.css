@@ -1,0 +1,26 @@
+
+.room-select {
+ position: relative;
+ min-width: 200px;
+ -webkit-appearance: none;
+ padding: 7px 40px 7px 12px;
+ width: 100%;
+ border: 1px solid #E8EAED;
+ border-radius: 5px;
+ background: white;
+ box-shadow: 0 1px 3px -2px #959dad;
+ cursor: pointer;
+ font-family: inherit;
+ font-size: 14px;
+ transition: all 150ms ease; 
+ background: white;
+}
+
+.room-select:focus{
+    outline: none;
+}
+
+.room-select select option {
+    background: white;
+    font-size: 16px;
+}
