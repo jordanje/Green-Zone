@@ -35,6 +35,7 @@ export default function Room({room}) {
                 <p>{addedPlant.plant.name}</p>
                 <img src={addedPlant.plant.image} />
                 <button onClick={() => handleWaterPlant(addedPlant.id)}>Water</button>
+
             </div>
             ))}
             </div>
