@@ -9,7 +9,7 @@ export default function RoomContainer({rooms, addedPlants}) {
             <div className="rooms">
                  {rooms.map((room) => {
                     return (
-                    <div className="room" id={room.id}>
+                    <div className="room" >
                         <Room key={room.id} room={room} addedPlants={addedPlants}/>
                     </div>
                     )

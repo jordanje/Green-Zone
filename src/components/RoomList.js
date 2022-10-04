@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 import "./Home.css";
 
-function RoomList ({search, rooms, currentRoom}) {
+function RoomList ({search, rooms, handleRoomChange, currentRoom}) {
     const [addRoom, setAddRoom] = useState("")
   
 
-    function handleRoomChange(e) {
-        // setCurrentRoom(e.target.value)
-    }
+  
 
     function handleAddRoom(e) {
         e.preventDefault()
@@ -22,19 +20,21 @@ function RoomList ({search, rooms, currentRoom}) {
 
     return (
         <div>
-            {/* <form onSubmit={handleAddRoom}>
+         {/* <form onSubmit={handleAddRoom}>
                 <input className="new-room" type="text" value={addRoom} placeholder="New Room" onChange={newRoomInput}/>
                 <input type="submit" value="Create"/>
-            </form>
+            </form> */}
 
 
             <label>Add plant to: 
                 <select className="form-dropdown" name="room" value={currentRoom} onChange={handleRoomChange}>
+                    <option>Select Room</option>
+                   
                     {rooms.map((room) => {
-                    return <option key={room} value={room}>{room}</option>
-                    })}
+                    return <option key={room.id} value={room.id} name={room.name}>{room.name}</option>
+                    })} 
                 </select>
-            </label> */}
+            </label> 
         </div>
     )
 }
