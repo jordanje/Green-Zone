@@ -1,3 +1,5 @@
+import "./Plant.css"
+
 export default function Plant({plant, currentRoom}) {
     const { name, image, care_level, size, id } = plant
     console.log(currentRoom)
@@ -20,13 +22,15 @@ export default function Plant({plant, currentRoom}) {
 
 
     return (
-        <div>
+        <div className="plant-card">
             <h3>{name}</h3>
             <img src={image} />
-            <p>Care Level: {care_level}</p>
-            <p>Size: {size}</p>
-            <button onClick={() => handleAddPlant(name)}>Add</button>
-            
+           
+            <div className="plant-flex">
+            <p>Size: <span>{size}</span></p>
+            <p>Care Level: <span>{care_level}</span> </p>
+            <button className="button-6" onClick={() => handleAddPlant(name)}>+</button>
+            </div>
         </div>
     )
 }

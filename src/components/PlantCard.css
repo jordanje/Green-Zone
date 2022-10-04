@@ -4,20 +4,16 @@
 }
 
 .plant-list img{
-    width: 150px;
-    height: 180px;
+    width: 120px;
+    height: 150px;
+    padding: -10px;
+    margin: -10px;
 }
 
 .plant-list {
     display: flex;
     flex-wrap: wrap;
     margin-top: 30px;
-}
-
-.plant-1 {
-    height: 350px;
-    width: 160px;
-    padding: 10px;
 }
 
 .plant-fx {
