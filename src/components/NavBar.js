@@ -1,15 +1,12 @@
 import React, { useHistory } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import "./NavBar.css"
 
 function NavBar() {
     return (
         <div className="navbar">
-          <button className="home">
-            <Link to="/">Home</Link>
-          </button>
-          <button className="plantCards">
-            <Link to="/plants">Plants</Link>
-          </button>
+            <NavLink className="nav-link" to="/rooms">Rooms</NavLink>
+            <NavLink className="nav-link" to="/plants">Plants</NavLink>
         </div>
       )}
 export default NavBar
