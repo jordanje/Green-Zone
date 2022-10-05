@@ -1,6 +1,8 @@
 import "./RoomContainter.css"
 import Room from "./Room"
 import NewRoom from "./NewRoom"
+import NavBar from "./NavBar"
+import WaterLog from "./WaterLog"
 
 export default function RoomContainer({rooms, setRooms, addedPlants}) {
 
@@ -21,5 +23,6 @@ export default function RoomContainer({rooms, setRooms, addedPlants}) {
                 )} 
             </div>
         </div>
+
     )
 }

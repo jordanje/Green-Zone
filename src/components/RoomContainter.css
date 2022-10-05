@@ -1,3 +1,13 @@
+#room-page {
+    display: flex;
+}
+
+.water-log {
+    width: 200px;
+    margin: 0;
+    float: right;
+}
+
 #room-container {
     margin-top: 10px;
 }
