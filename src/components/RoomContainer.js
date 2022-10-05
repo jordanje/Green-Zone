@@ -1,4 +1,4 @@
-import "./RoomContainter.css"
+import "./RoomContainer.css"
 import Room from "./Room"
 import NewRoom from "./NewRoom"
 import NavBar from "./NavBar"
