@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./NewRoom.css"
 
 function NewRoom({ rooms, setRooms }) {
   const [addRoom, setAddRoom] = useState("");
@@ -27,16 +28,18 @@ function NewRoom({ rooms, setRooms }) {
   }
 
   return (
-    <form onSubmit={handleAddRoom}>
+    <div className="new-room-form">
+    <form onSubmit={handleAddRoom} className="form">
       <input
-        className="new-room"
+        className="new-room-input"
         type="text"
         value={addRoom}
         placeholder="New Room"
         onChange={newRoomInput}
       />
-      <input type="submit" value="Create" />
+      <input type="submit" value="Create" className="btn" />
     </form>
+    </div>
   );
 }
 

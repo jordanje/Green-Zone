@@ -1,4 +1,32 @@
+#room-container {
+    margin-top: 10px;
+}
+
 .room {
-    border: black solid 1px;
-    height: 400px;
+    border-top: black solid 1px;
+    display: flexbox;
+    flex-wrap: wrap;
+    padding: 10px 20px 10px 20px;
+    margin-top: 50px;
+}
+
+.rooms {
+    margin-top: 120px;
+}
+
+.new-room {
+    margin: 20px;
+    position: relative;
+
+}
+
+#room-container h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 36px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
 }
