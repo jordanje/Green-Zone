@@ -34,20 +34,27 @@ export default function Room({room}) {
         {const deletePlant = addedPlants.filter(deletedPlant => deletedPlant.id !== id)
         setAddedPlants(deletePlant)}) 
     }
+    
 
     return (
         <div id="room">
             <h2>{room.name}</h2>
             <div className="added-plants">
-            {addedPlants.map((addedPlant) => (
+            {addedPlants.map((addedPlant) => {
+                const date = addedPlant.last_watered
+                const watered = String(date).slice(5,10);
+                return (
             <div className="current-plants" key={addedPlant.id}>
-                <p>{addedPlant.plant.name}</p>
+                <button onClick={() => deleteHandler(addedPlant.id)} className="delete-btn">X</button>
+                <h3>{addedPlant.plant.name}</h3>
                 <div className={(isOn.id=== addedPlant.id) ? "water-droplet" : ""}></div>
                 <img src={addedPlant.plant.image} />
-                <button onClick={() => handleWaterPlant(addedPlant.id)}>Water</button>
-                <button onClick={() => deleteHandler(addedPlant.id)} className="delete">Delete</button>
+                <div id="watered-div">
+                    {/* { addedPlant.last_watered != null ? <p>Last watered:  <span>{watered}</span></p> : null } */}
+                    <button onClick={() => handleWaterPlant(addedPlant.id)} className="water-btn">water</button>
+                </div>
             </div>
-            ))}
+            )})}
             </div>
         </div>
     )

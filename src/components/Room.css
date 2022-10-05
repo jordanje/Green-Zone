@@ -1,15 +1,56 @@
 .added-plants {
-    display: flex;
+    display: flex; 
     flex-wrap: wrap;
 }
 
 .added-plants img {
     height: 200px;
     width: 150px;
+    padding: 0px;
 }
 
-.current-plant {
-    position: relative;
+.current-plants {
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    width: 200px;
+    height: 300px;
+    padding: 20px 20px;
+    box-shadow: 0px 1px 2px 2px rgba(98, 98, 98, 0.1);
+    border-radius: 10%;
+    margin: 10px;
+}
+
+.delete-btn{
+    margin-left: 170px;
+    margin-top: -30px;
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 0px;
+    background-color: transparent;
+    border: 1.5px solid rgb(88, 218, 85);
+    box-shadow: 0px 1px 2px 0.2px rgb(152, 152, 152); 
+    border-radius: 10%;
+    cursor: pointer;
+}
+
+.water-btn {
+    margin-top: 10px;
+    background-color: rgb(105, 223, 209);
+    padding: 5px 10px;
+    border: none;
+    box-shadow: 0px 1px 2px 0.5px rgb(142, 142, 142);
+    border-radius: 10%;
+    color: rgb(3, 3, 3);
+    width: 70px;
+}
+
+.current-plants h3{
+    padding: 0px;
+    padding-bottom: 0px;
+    margin-top: -20px;
+    text-transform: uppercase;
+    font-size: 16px;
 }
 
 .water-droplet {
@@ -22,6 +63,10 @@
     background: linear-gradient(to right, aliceblue, lightblue, lightskyblue);
     margin-left: 70px;
     animation: water-droplet 1.5s forwards;
+}
+
+#watered-div p {
+    font-size: 14px;
 }
 
 @keyframes water-droplet {
