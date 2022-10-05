@@ -50,7 +50,7 @@ export default function Room({room}) {
                 <div className={(isOn.id=== addedPlant.id) ? "water-droplet" : ""}></div>
                 <img src={addedPlant.plant.image} />
                 <div id="watered-div">
-                    {/* { addedPlant.last_watered != null ? <p>Last watered:  <span>{watered}</span></p> : null } */}
+                     { addedPlant.last_watered != null ? <p>Last watered:  <span>{watered}</span></p> :<p>Water your plant!</p> } 
                     <button onClick={() => handleWaterPlant(addedPlant.id)} className="water-btn">water</button>
                 </div>
             </div>

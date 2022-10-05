@@ -1,3 +1,5 @@
+
+
 .added-plants {
     display: flex; 
     flex-wrap: wrap;
@@ -28,17 +30,17 @@
     font-size: 14px;
     margin-bottom: 0px;
     background-color: transparent;
-    border: 1.5px solid rgb(88, 218, 85);
+    border: 1px solid rgb(22, 165, 20);
     box-shadow: 0px 1px 2px 0.2px rgb(152, 152, 152); 
     border-radius: 10%;
     cursor: pointer;
 }
 
 .water-btn {
-    margin-top: 10px;
+    margin-top: 0px;
     background-color: rgb(105, 223, 209);
     padding: 5px 10px;
-    border: none;
+    border: 1px solid rgb(105, 223, 209);
     box-shadow: 0px 1px 2px 0.5px rgb(142, 142, 142);
     border-radius: 10%;
     color: rgb(3, 3, 3);
@@ -67,6 +69,7 @@
 
 #watered-div p {
     font-size: 14px;
+    height: 10px;
 }
 
 @keyframes water-droplet {

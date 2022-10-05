@@ -9,7 +9,6 @@ import Search from './components/Search'
 import NavBar from './components/NavBar'
 import RoomContainer from './components/RoomContainer';
 
-
 function App() {
   const [currentRoom, setCurrentRoom] = useState()
   const [rooms, setRooms] = useState([])
@@ -57,7 +56,7 @@ function App() {
 
   return (
     <div className="App">
-      <NavBar />
+        <NavBar />
       <Switch>
         <Route exact path="/">
           <Home />

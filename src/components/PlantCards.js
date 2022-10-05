@@ -2,10 +2,12 @@ import RoomList from "./RoomList";
 import "./PlantCard.css";
 import Plant from "./Plant";
 import Search from "./Search";
+import NavBar from "./NavBar";
 
 export default function PlantCards({plants, handleSearchChange, searchValue, rooms, currentRoom, handleRoomChange}) {
     return (
         <div className="plant-page">
+             
             <div className="plant-fx">
                 <Search handleSearchChange={handleSearchChange} searchValue={searchValue}/>
                 <RoomList rooms={rooms} currentRoom={currentRoom} handleRoomChange={handleRoomChange}/>
