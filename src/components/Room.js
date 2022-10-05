@@ -12,7 +12,6 @@ export default function Room({room}) {
     }, [])
 
     function handleWaterPlant(id) {
-        // setIsOn(true)
         fetch(`http://localhost:9292/added_plants/${id}`, {
             method: "PATCH",
             headers: {
@@ -22,7 +21,20 @@ export default function Room({room}) {
             }),
         })
         .then((r) => r.json())
-        .then((data) => setIsOn({ id: id, isWatered: true}))
+        .then((data) => {
+            const updatedData = addedPlants.map((plant)=>{
+                if(plant.id === id){
+                    plant.last_watered = data.last_watered
+                    console.log("watered plant", plant);
+                    return plant
+                }else{
+                    console.log(plant);
+                    return plant
+                }
+            })
+            setAddedPlants(updatedData)
+            setIsOn({ id: id, isWatered: true})
+        })
     }
 
     function deleteHandler(id) {
