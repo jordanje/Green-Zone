@@ -8,3 +8,35 @@
     width: 150px;
 }
 
+.current-plant {
+    position: relative;
+}
+
+.water-droplet {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border-radius: 1em;
+    border-top-right-radius: 0.2em;
+    transform: rotate(-40deg);
+    background: linear-gradient(to right, aliceblue, lightblue, lightskyblue);
+    margin-left: 70px;
+    animation: water-droplet 1.5s forwards;
+}
+
+@keyframes water-droplet {
+    0% {
+        opacity: 0;
+        transform: translateY(0) rotate(-40deg);
+    }
+    20% {
+        opacity: 1;
+    }
+    75%{
+        opacity: .5;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(80px) rotate(-40deg);
+    }
+}
