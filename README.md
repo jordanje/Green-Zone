@@ -4,7 +4,7 @@ Team Members: Ben Kurose, Jordan Jennings, Joanna Bell
 Phase 2: React
 </br>
 </br>
-![this is an image](../public/roomspage.gif)
+![this is an image](../src/roomspage.gif)
 
 ## Overview
 The All Bike Trails app allows users to search for bike trails by location and add their favorite trails to share with other trail riders. The motivation behind creating this app was to provide users, specifically bikers, a seamless way to find and share places to ride. Thus, reducing the time and stress involved between getting out the door and getting on their bike. It also creates a sense of community and information exchange for users who otherwise may not have met.
