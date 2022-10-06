@@ -1,39 +1,37 @@
-# All Bike Trails
-Team Members: Ben Kurose, Jordan Jennings, Joanna Bell
+# Green Room
+Team Members: Chris Ou, Jordan Jennings, and Eric Jubera
 </br>
-Phase 2: React
+Phase 3: Ruby
 </br>
 </br>
-![](./src/roomspage.gif)
+![](./src/plantspage.gif)
 
 ## Overview
-The All Bike Trails app allows users to search for bike trails by location and add their favorite trails to share with other trail riders. The motivation behind creating this app was to provide users, specifically bikers, a seamless way to find and share places to ride. Thus, reducing the time and stress involved between getting out the door and getting on their bike. It also creates a sense of community and information exchange for users who otherwise may not have met.
+Green Room is an interactive plant expirience that allows users to search for plants, add plants to their rooms, and keep track of their watering schedule. The motivation behind this project was to create a fun visual of how many to many relationships work!
 </br>
 </br>
-![this is an image](./src/searchpage.png)
+![this is an image](./src/roomspage.gif)
 
-## How It Works
-The app is built with React and Bootstrap. All Bike Trails has a search functionality on the homepage that filters bike trails to the users preference based on location and name. Users can also add bike trails allowing them to share their favorites and comments with other users. Trails can be deleted later if the user prefers.
+## What It Does
+The frontend of this project is built with React. Plants can be searched by name and filtered by difficulty of care. Plants can be added to room of choice. On the bottom of the Plant page, a new plant can be added and saved to the database. Within the Rooms page, a user can keep track of when their plants were last watered and choose to water their plants. Users also have the options to add new rooms, delete rooms, and delete plants inside of rooms.
 </br>
 </br>
 
-![this is an image](./src/assets/Screen%20Shot%202022-09-15%20at%2010.18.29%20PM.png)
+![this is an image](./src/newplant.gif)
 </br>
 </br>
-![this is an image](./src/assets/Screen%20Shot%202022-09-16%20at%209.32.21%20AM.png)
 
 ## How It Functions
-The main functionality is built using a fetch request to handle CRUD capabilities: create new trails, read trails from database, update comments for a trail and delete a trail. We're replicating a backend server by using json-server. The new trails are saved in the db.json file. Trails can be deleted as well by using a DELETE request and removing it from db.json.
+The main functionality is built using fetch requests to handle all CRUD capabilities. The three tables being interacted with by the frontend are Rooms, Plants, and Added_Plants. The database and routes are being handle by Active Records and Sinatra. 
 </br>
 </br>
 
 ## How to Run the Project
-The app requires you to install dependencies and run a local server. Ideally in the future it will be hosted by an external server. To test All Bike Trails for yourself, clone this repository to your local computer. 
+The app requires you to install dependencies and run a local server. Read directions on how to get the backend started at: https://github.com/jordanje/green-room-backend. Fork and download both repositories to your computer to get the site fully functioning.
 
 ```
-$ npm install -g json-server
-$ cd all-bike-trails
-$ json-server --watch db.json
+$ npm install 
+$ npm start
 ```
 
 </br>
