@@ -7,7 +7,7 @@ import WaterLog from "./WaterLog"
 export default function RoomContainer({rooms, setRooms, addedPlants}) {
 
     return (
-        <div id="room-container">
+        <div className="room-container">
             <div className="new-room">
                 <NewRoom rooms = {rooms} setRooms = {setRooms}/>
             </div>
@@ -22,6 +22,7 @@ export default function RoomContainer({rooms, setRooms, addedPlants}) {
                  }
                 )} 
             </div>
+            <div className="footer"></div>
         </div>
 
     )

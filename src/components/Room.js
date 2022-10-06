@@ -58,7 +58,7 @@ export default function Room({room}) {
                 return (
             <div className="current-plants" key={addedPlant.id}>
                 <button onClick={() => deleteHandler(addedPlant.id)} className="delete-btn">X</button>
-                <h3>{addedPlant.plant.name}</h3>
+                <div className="plant-title"><h3>{addedPlant.plant.name}</h3></div>
                 <div className={(isOn.id=== addedPlant.id) ? "water-droplet" : ""}></div>
                 <img src={addedPlant.plant.image} />
                 <div id="watered-div">
