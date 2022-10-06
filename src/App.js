@@ -16,6 +16,7 @@ function App() {
   const [ plants, setPlants ] = useState([])
   const [ addedPlants, setAddedPlants ] = useState([])
   const [ searchValue, setSearchValue ] = useState("")//updates on search change
+  const [ careLevel, setCareLevel ] = useState("")
 
 
   useEffect(() => {
@@ -39,20 +40,32 @@ function App() {
   // search plants
   function handleSearchChange(event) {
     setSearchValue(event.target.value)
-   
-
   }
 
   const searchedPlants = plants.filter((plant) => {
     const plantName = plant.name.toLowerCase()
     const search = searchValue.toLowerCase()
-    return plantName.includes(search)
+    if(careLevel === "EASY"){
+      return plant.care_level === "easy" && plantName.includes(search)
+    }
+    if(careLevel === "MEDIUM"){
+      return plant.care_level === "medium" && plantName.includes(search)
+    }
+    if(careLevel === "HARD"){
+      return plant.care_level === "hard" && plantName.includes(search)
+    }
+      return plantName.includes(search)
   })
+ 
 
   // roomlist dropdown
   function handleRoomChange(event) {
     setCurrentRoom(event.target.value)
     // setCurrentRoomId(event.target.value)
+  }
+
+  function handleCareLevel(event) {
+    setCareLevel(event.target.value)
   }
 
   return (
@@ -67,12 +80,16 @@ function App() {
         </Route>
         <Route exact path="/plants">
           <PlantCards 
-          plants={searchedPlants} 
+          searchedPlants={searchedPlants} 
+          plants={plants}
+          setPlants={setPlants}
           handleSearchChange={handleSearchChange} 
           searchValue={searchValue} 
           rooms={rooms} 
           currentRoom={currentRoom}
           handleRoomChange={handleRoomChange}
+          careLevel = {careLevel}
+          handleCareLevel={handleCareLevel}
           />
         </Route>
       </Switch>

@@ -76,36 +76,17 @@ export default function Room({ room, setRooms, rooms }) {
           const watered = String(date).slice(5, 10);
           return (
             <div className="current-plants" key={addedPlant.id}>
-              <button
-                onClick={() => deleteHandler(addedPlant.id)}
-                className="delete-btn"
-              >
-                X
-              </button>
-              <h3>{addedPlant.plant.name}</h3>
-              <div
-                className={isOn.id === addedPlant.id ? "water-droplet" : ""}
-              ></div>
-              <img src={addedPlant.plant.image} />
-              <div id="watered-div">
-                {addedPlant.last_watered != null ? (
-                  <p>
-                    Last watered: <span>{watered}</span>
-                  </p>
-                ) : (
-                  <p>Water your plant!</p>
-                )}
-                <button
-                  onClick={() => handleWaterPlant(addedPlant.id)}
-                  className="water-btn"
-                >
-                  water
-                </button>
-              </div>
+                <button onClick={() => deleteHandler(addedPlant.id)} className="delete-btn">X</button>
+                <div className="plant-title"><h3>{addedPlant.plant.name}</h3></div>
+                <div className={(isOn.id=== addedPlant.id) ? "water-droplet" : ""}></div>
+                <img src={addedPlant.plant.image} />
+                <div id="watered-div">
+                     { addedPlant.last_watered != null ? <p>Last watered:  <span>{watered}</span></p> :<p>Water your plant!</p> } 
+                    <button onClick={() => handleWaterPlant(addedPlant.id)} className="water-btn">water</button>
+                </div>
             </div>
-          );
-        })}
+            )})}
+            </div>
       </div>
-    </div>
   );
 }

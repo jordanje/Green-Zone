@@ -1,0 +1,27 @@
+.form-container {
+    display: flex;
+    width: 400px;
+    background-color: aqua;
+
+}
+
+.form input {
+    padding: 5px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+.form select {
+    margin-right: 10px;
+    padding: 5px;
+}
+
+.form #image {
+    width: 330px;
+
+}
+
+.form #create {
+    margin-top: 10px;
+    width: 340px;
+    padding: 10px;
+}
