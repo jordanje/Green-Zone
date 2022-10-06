@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+# All Bike Trails
+Team Members: Ben Kurose, Jordan Jennings, Joanna Bell
+</br>
+Phase 2: React
+</br>
+</br>
+![this is an image](../public/roomspage.gif)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+The All Bike Trails app allows users to search for bike trails by location and add their favorite trails to share with other trail riders. The motivation behind creating this app was to provide users, specifically bikers, a seamless way to find and share places to ride. Thus, reducing the time and stress involved between getting out the door and getting on their bike. It also creates a sense of community and information exchange for users who otherwise may not have met.
+</br>
+</br>
+![this is an image](./src/assets/Screen%20Shot%202022-09-15%20at%2010.15.38%20PM.png)
 
-## Available Scripts
+## How It Works
+The app is built with React and Bootstrap. All Bike Trails has a search functionality on the homepage that filters bike trails to the users preference based on location and name. Users can also add bike trails allowing them to share their favorites and comments with other users. Trails can be deleted later if the user prefers.
+</br>
+</br>
 
-In the project directory, you can run:
+![this is an image](./src/assets/Screen%20Shot%202022-09-15%20at%2010.18.29%20PM.png)
+</br>
+</br>
+![this is an image](./src/assets/Screen%20Shot%202022-09-16%20at%209.32.21%20AM.png)
 
-### `npm start`
+## How It Functions
+The main functionality is built using a fetch request to handle CRUD capabilities: create new trails, read trails from database, update comments for a trail and delete a trail. We're replicating a backend server by using json-server. The new trails are saved in the db.json file. Trails can be deleted as well by using a DELETE request and removing it from db.json.
+</br>
+</br>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## How to Run the Project
+The app requires you to install dependencies and run a local server. Ideally in the future it will be hosted by an external server. To test All Bike Trails for yourself, clone this repository to your local computer. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```
+$ npm install -g json-server
+$ cd all-bike-trails
+$ json-server --watch db.json
+```
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+</br>
