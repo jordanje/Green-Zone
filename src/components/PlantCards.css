@@ -22,3 +22,11 @@
     padding-left: 10px;
     padding-right: 10px;
 }
+
+.plant-fx-right {
+    display: flex;
+}
+
+.form-container {
+    margin-top: 30px;
+}

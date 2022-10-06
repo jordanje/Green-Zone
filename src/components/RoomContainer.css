@@ -1,16 +1,9 @@
-#room-page {
-    display: flex;
-}
-
 .water-log {
     width: 200px;
     margin: 0;
     float: right;
 }
 
-#room-container {
-    margin-top: 10px;
-}
 
 .room {
     border-top: black solid 1px;
@@ -39,4 +32,8 @@ h2 {
     font-size: 36px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 300;
+}
+
+.footer {
+    height: 200px;
 }
