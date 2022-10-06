@@ -1,5 +1,7 @@
 import { useState } from "react"
 
+import "./NewPlant.css"
+
 export default function NewPlant ({plants, setPlants}) {
     const [ formData, setFormData ] = useState({name: "", image: "", care_level: "", size: ""})
 
@@ -45,8 +47,8 @@ export default function NewPlant ({plants, setPlants}) {
                     <option value="medium">Medium</option>
                     <option value="large">Large</option>
                 </select>
-                <input type="text" name="image" value={formData.image} onChange={handleFormChange} placeholder="Image..."/>
-                <input type="submit" value="Create" />
+                <input type="text" name="image" id="image" value={formData.image} onChange={handleFormChange} placeholder="Image..."/>
+                <input type="submit" value="Create" id="create" />
             </form>
         </div>
     )
