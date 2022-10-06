@@ -79,7 +79,9 @@ function App() {
         </Route>
         <Route exact path="/plants">
           <PlantCards 
-          plants={searchedPlants} 
+          searchedPlants={searchedPlants} 
+          plants={plants}
+          setPlants={setPlants}
           handleSearchChange={handleSearchChange} 
           searchValue={searchValue} 
           rooms={rooms} 

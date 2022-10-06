@@ -2,10 +2,10 @@ import RoomList from "./RoomList";
 import "./PlantCards.css";
 import Plant from "./Plant";
 import Search from "./Search";
-import NavBar from "./NavBar";
+import NewPlant from "./NewPlant";
 import FilterPlant from "./FilterPlant";
 
-export default function PlantCards({plants, handleSearchChange, searchValue, rooms, currentRoom, handleRoomChange, careLevel, handleCareLevel}) {
+export default function PlantCards({searchedPlants, plants, setPlants, handleSearchChange, searchValue, rooms, currentRoom, handleRoomChange, careLevel, handleCareLevel}) {
     return (
         <div className="plant-page">
              
@@ -21,8 +21,12 @@ export default function PlantCards({plants, handleSearchChange, searchValue, roo
                 
             </div>
             <div className="plant-list">
-                {plants.map((plant) => <Plant key={plant.id} plant={plant} currentRoom={currentRoom}/>)}
+                {searchedPlants.map((plant) => <Plant key={plant.id} plant={plant} currentRoom={currentRoom}/>)}
             </div>
+            <div className="form-container">
+                <NewPlant plants={plants} setPlants={setPlants}/>
+            </div>
+           
         </div>
     )
 }
