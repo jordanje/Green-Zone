@@ -29,7 +29,8 @@
 
 .new-plant-form {
    margin-top: 60px;
-   background-color: rgb(111, 234, 245);
+   /* background-color: rgb(111, 234, 245); */
+   background-color: rgb(183, 113, 44);
    padding: 10px;
 }
 
@@ -55,10 +56,10 @@
     font-size: 15px;
     cursor: pointer;
     box-shadow: 0px 0.3px 1px 0.5px rgb(184, 184, 184);
-    background-color: rgb(111, 234, 245);
+    background-color: rgb(183, 113, 44);
     text-transform: uppercase;
     font-weight: 500;
     font-family: Arial, Helvetica, sans-serif;
-    color: rgb(59, 59, 59);
+    color: rgb(255, 255, 255);
     font-weight: 600;
 }

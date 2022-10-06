@@ -17,7 +17,7 @@ The frontend of this project is built with React. Plants can be searched by name
 </br>
 </br>
 
-![this is an image](./src/newplant.gif)
+![this is an image](./src/ezgif.com-gif-maker.gif)
 </br>
 </br>
 
