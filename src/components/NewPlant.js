@@ -24,7 +24,8 @@ export default function NewPlant ({plants, setPlants}) {
       .then((res) => res.json())
       .then((data) => {
         const newPlants = [...plants, data];
-        setPlants(newPlants);
+        const sortedPlants = newPlants.sort((a,b) => a.name.toUpperCase().localeCompare(b.name.toUpperCase()))
+        setPlants(sortedPlants);
         setFormData({name: "", image: "", care_level: "", size: ""})
       });
   }

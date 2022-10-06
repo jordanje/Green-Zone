@@ -65,11 +65,12 @@ export default function Room({ room, setRooms, rooms }) {
 
   return (
     <div id="room">
+      <div className="delete-btn-div">
+        <button className="delete-room-btn" onClick={() => deleteRoomHandler(room.id)}>
+           Delete 
+        </button>
+      </div>
       <h2>{room.name}</h2>
-          <button
-          className="delete-room-btn"
-          onClick={() => deleteRoomHandler(room.id)}
-          >Delete Room</button>
       <div className="added-plants">
         {addedPlants.map((addedPlant) => {
           const date = addedPlant.last_watered;

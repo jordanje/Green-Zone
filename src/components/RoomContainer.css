@@ -6,7 +6,7 @@
 
 
 .room {
-    border-top: black solid 1px;
+    border-top: rgb(130, 130, 130) solid 2px;
     display: flexbox;
     flex-wrap: wrap;
     padding: 10px 20px 10px 20px;
@@ -23,17 +23,13 @@
 
 }
 
-#room-container h1 {
-    font-family: Arial, Helvetica, sans-serif;
-    text-transform: uppercase;
-}
-
 h2 {
-    font-size: 36px;
+    margin-top: 0;
+    font-size: 38px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 300;
 }
 
 .footer {
-    height: 200px;
+    height: 100px;
 }

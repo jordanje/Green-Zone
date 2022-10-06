@@ -18,7 +18,8 @@ function NewRoom({ rooms, setRooms }) {
       .then((res) => res.json())
       .then((data) => {
         const newRooms = [...rooms, data];
-        setRooms(newRooms);
+        const roomsSorted = newRooms.sort((a, b) => a.name.toUpperCase().localeCompare(b.name.toUpperCase()))
+        setRooms(roomsSorted);
         setAddRoom("");
       });
   }
