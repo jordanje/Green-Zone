@@ -7,7 +7,7 @@ Phase 3: Ruby
 ![](./src/plantspage.gif)
 
 ## Overview
-Green Room is an interactive plant expirience that allows users to search for plants, add plants to their rooms, and keep track of their watering schedule. The motivation behind this project was to create a fun visual of how many to many relationships work!
+Green Room is an interactive plant expirience that allows users to search for plants, add plants to their rooms, and see when their plants were watered. The motivation behind this project was to create a fun visual for plants owners to easily keep track of their many plants. Green room is meant to act as a replica of your own plant set up at home!
 </br>
 </br>
 ![this is an image](./src/roomspage.gif)
@@ -22,7 +22,7 @@ The frontend of this project is built with React. Plants can be searched by name
 </br>
 
 ## How It Functions
-The main functionality is built using fetch requests to handle all CRUD capabilities. The three tables being interacted with by the frontend are Rooms, Plants, and Added_Plants. The database and routes are being handle by Active Records and Sinatra. 
+The main functionality is built using fetch requests to our backend server to handle all CRUD capabilities. The three tables being interacted with by the frontend are Rooms, Plants, and Added_Plants. These three tables represent a many-to-many relationship in our database. The database and routes are being handle by Active Records, Rake, and Sinatra. 
 </br>
 </br>
 
