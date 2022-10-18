@@ -7,7 +7,7 @@ Phase 3: Ruby
 ![](./src/plantspage.gif)
 
 ## Overview
-Green Room is an interactive plant expirience that allows users to search for plants, add plants to their rooms, and see when their plants were watered. The motivation behind this project was to create a fun visual for plants owners to easily keep track of their many plants. Green room is meant to act as a replica of your own plant set up at home!
+Green Room is an interactive plant experience that allows users to search for plants, add plants to their rooms, and see when their plants were watered. The motivation behind this project was to create a fun visual for plants owners to easily keep track of their many plants. Green room is meant to act as a replica of your own plant set up at home!
 </br>
 </br>
 ![this is an image](./src/roomspage.gif)
